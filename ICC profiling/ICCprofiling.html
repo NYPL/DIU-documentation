@@ -1,0 +1,515 @@
+<html><HEAD>
+      <link href="static/css/bootstrap.min.css" rel="stylesheet">
+      <script src="static/js/bootstrap.min.js"></script>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.top-buffer { margin-top: 3rem; }
+.bottom-buffer { margin-bottom: 2rem; }
+</style>
+</HEAD>
+<body>
+    <div class="container">
+    <div class="row top-buffer">
+        <div class="col-lg-12">
+            <div class="bs-component">
+                <div class="jumbotron">
+<H1 align="center">
+    ICC Profiling for DIU Camera Systems Using the X-Rite Digital ColorChecker
+    SG Card and basICColor input Software — ICC Profile Verification using
+    IQ-Analyzer Software
+</H1>
+<p align="center">
+    <em>Created:7/23/2015</em>
+</p>
+<p align="center">
+    <em>Last updated: 07/25/2018</em>
+</p>
+<p align="center">
+    <em></em>
+</p>
+<p align="center">
+    <em></em>
+</p></p></div></div></div></div>
+<p>
+    Within our Capture One software, under the BASE CHARACTERISTICS tool, there
+    is a drop-down menu that allows us to choose an ICC Profile.
+</p>
+<p align="center">
+    <img
+        width="243"
+        height="76"
+        src="images/image17.png"
+    />
+</p>
+<p>
+    The chosen profile, in this case Flash, is specific to the Phase One back
+    model being used.
+</p>
+<p>
+    An ICC profile is responsible for interpreting the raw capture data
+    streaming off a digital back’s sensor. It shapes a capture’s tonal and
+    color range, and the manner by which all captured tones and colors relate
+    to one another. We can say that the ICC profiles pre-stocked within Capture
+One are “canned” because they are for optimized for specific digital back    <strong>models</strong> (P40+, P45, P65, IQ180, IQ3); however, these
+profiles are not optimized for the specific digital back    <strong>units</strong> we are working with. Since these canned profiles
+    perform, at best, a generalized interpretation of sensor data, our
+    real-world results are compromised. Colors can shift away from accurate,
+    tones can lose their neutrality, contrast can be elevated, and even focus
+    can appear softened.
+</p>
+<p>
+    By replacing the canned ICC profiles with in-house, custom-made ICC
+    profiles, we are able to generate profiles that relate to the specific
+    digital back, lens and lighting combinations present in each bay. In other
+    words, instead of using a canned profile for an IQ180, we are able to
+    create a profile for the specific IQ180 back residing in Bay 4 (serial
+    number FP030582), its Schneider lens, and its four Profoto strobe light
+    source.
+</p>
+<p>
+    Our own custom-made profile will be found within the same drop-down menu:
+</p>
+<p align="center">
+    <img
+        width="262"
+        height="76"
+        src="images/image10.png"
+    />
+</p>
+<p>
+    By using a standardized system from bay to bay to generate custom profiles,
+    we not only optimize results from each station, but optimize the results
+    from the studio as a whole. The desire is to have capture systems in place
+    that interpret sensor data similarly. A project begun in Bay 1,
+    theoretically, can then be finished in Bay 6. The results should closely
+    match.
+</p>
+<p>
+    By the way, ICC means International Color Consortium.
+</p>
+<p align="center" class="h3">
+    Step One: Creating the ICC Profile Target Image
+</p>
+<p>
+    To begin, we need to image the X-Rite Digital ColorChecker SG Card.
+</p>
+<p align="center">
+    <img
+        width="419"
+        height="295"
+        src="images/image6.png"
+    />
+</p>
+<p>
+    To have standardized results from bay to bay we need a repeatable set-up**:
+</p>
+<p>
+    Digital back — 30 inches above copy stand surface
+</p>
+<p>
+    Lights — at 20 degrees
+</p>
+<p>
+    — 56” from center (copy stand surface to light stand)
+</p>
+<p>
+    — 36” above copy stand surface
+</p>
+<p align="center">
+    <img
+        width="470"
+        height="258"
+        src="images/image8.jpg"
+    />
+</p>
+<p>
+    <strong>*</strong>
+    This set-up is applicable for Bays 1, 3, 5, and 6. The IQ3 in Bay 4 will
+    use four lights at their standard height and distance. The BC100 has its
+    own methodology.
+</p>
+<p>
+    <strong>**Please note</strong>
+    , that since first creating this document back in 2015 some things have
+    changed. One change is our conclusion that a repeatable set-up, as
+    described above, is unnecessary among applicable bays. Best is to capture
+    the SG Card using a set-up common to the bay in question, in other words,
+    an average set-up for an average project. The lights shouldn’t be too high
+    or too low, too angled, or too close to the table.
+</p>
+<p>
+    Start Capture One and set the PROCESS RECIPES to U Files. Make sure the ICC
+Profile for the PROCESS RECIPE is set for    <strong>Embed color profile</strong>.
+</p>
+<p>
+Go to BASE CHARACTERISTICS &gt; ICC Profile &gt; Effects &gt;    <strong>No color correction</strong>
+</p>
+<p>
+    <strong></strong>
+</p>
+<p>
+    Focus on chart and create an LCC.
+</p>
+<p>
+    Photograph the chart so that the central white square comes to 241 (E5) and
+    neutralize on the middle grey (H5). If Capture One adjustments are needed
+    to attain the 241 white-point, use the LEVELS highlight slider.
+</p>
+<p>
+    Crop the chart a hair more than size.
+</p>
+<p>
+    Add <strong>-TARGET</strong> as a suffix to the name of the file.
+</p>
+<p>
+    Process out the file.
+</p>
+<p>
+    Quit Capture One.
+</p>
+<p align="center" class="h3">
+    Step Two: Creating a Custom Profile Using basICColor input Software
+</p>
+<p>
+    Before opening the basICColor input software, which will create our custom
+    profiles, you’ll need to plug in the USB dongle for the software. It’s red!
+</p>
+<p>
+    Start the software. Enlarge the window to fill screen.
+</p>
+<p>
+    The screen will appear, in part, as such:
+</p>
+<p align="center">
+    <img
+        width="470"
+        height="297"
+        src="images/image16.png"
+    />
+</p>
+<p>
+Under <strong>Image</strong> click Select and navigate to your    <strong>TARGET</strong> image and choose.
+</p>
+<p>
+Under <strong>Reference</strong> click Select and navigate to file    <strong> DCSG BC.txt</strong> and choose.
+</p>
+<table cellpadding="0" cellspacing="0" align="center">
+    <tbody>
+        <tr>
+            <td width="2" height="0">
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <img
+                    width="470"
+                    height="244"
+                    src="images/image22.png"
+                />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br clear="ALL"/>
+<p align="center">
+    <img
+        width="470"
+        height="157"
+        src="images/image14.png"
+    />
+</p>
+<p>
+    Your <strong>TARGET</strong> image will appear with a superimposed grid.
+</p>
+<p align="center">
+    <img
+        width="470"
+        height="283"
+        src="images/image3.png"
+    />
+</p>
+<p>
+    Hold down the shift key as you grab the upper left corner square and move
+    the the upper left box of the grid over the upper left white square of the
+    ColorChecker chart. The bounding box will turn green when properly
+    positioned. While still holding down the shift key, grab the lower right
+    corner and do the same. All peripheral boxes should turn green. One might
+    need to adjust the corners independently, without the shift-key activated,
+    to secure the proper outcome. All green is preferred, but a yellow bounding
+    box here and there can be sufficient. None of the bounding boxes can appear
+    red.
+</p>
+<p>
+    If a first attempt is unsuccessful, restart the program and try anew.
+</p>
+<p>
+    Here’s a good result:
+</p>
+<p align="center">
+    <img
+        width="470"
+        height="404"
+        src="images/image15.png"
+    />
+</p>
+<p>
+    Then under Filename name your profile. Our convention is as follows at this
+    point in time:
+</p>
+<p>
+    <strong>PhaseOneBackModel-NYPL_Bay#_Flash_YYYYMM</strong>
+</p>
+<p>
+    e.g., <strong>PhaseOneP45-NYPL_Bay1_Flash_201807</strong>.
+</p>
+<p>
+    <strong></strong>
+</p>
+<p>
+    Our backs as of today (7/2018):
+</p>
+<p>
+    PhaseOneIQ3100MP-
+</p>
+<p>
+    PhaseOneIQ180-
+</p>
+<p>
+    PhaseOneP65-
+</p>
+<p>
+    PhaseOneP45-
+</p>
+<p>
+    PhaseOneP40+-
+</p>
+<p>
+It’s very important to follow this convention as such, especially the    <strong>PhaseOneBackModel-</strong> part, in order for proper
+    viewing/accessibility within the Capture One application.
+</p>
+<p>
+    Under Spectral conversion<strong> </strong>choose &gt; Illuminant &gt; CIE
+    Standard Illuminants &gt; <strong>CIE_D50</strong>.
+</p>
+<p align="center">
+    <img
+        width="470"
+        height="297"
+        src="images/image13.png"
+    />
+</p>
+<p>
+    Click Create ICC profile(s) at the bottom of the window. The profile will
+    be automatically stored within the computer’s Library folder &gt; ColorSync
+    &gt; Profiles and made accessible to the Capture One program through the
+    dropdown ICC menu within the Base Characteristics tool.
+</p>
+<p align="center" class="h3">
+    Step Three: Creating the ICC Profile Verification Image
+</p>
+<p>
+    Start Capture One and set the PROCESS RECIPES to U Files. Make sure the ICC
+    Profile for the PROCESS RECIPE is set for <strong>ProPhoto</strong>.
+</p>
+<p>
+    Go to BASE CHARACTERISTICS &gt; ICC Profile. In the dropdown menu you’ll
+    find the ICC profile just created. Choose this profile and capture another
+    image of the ColorChecker chart using the previously made LCC.
+</p>
+<p>
+    Adjust the white square (E5) to 241 and assure the neutrality of the middle
+    grey (H5).
+</p>
+<p>
+    No need to crop.
+</p>
+<p>
+    Add <strong>-VERIFY</strong> as a suffix to the name of the file.
+</p>
+<p>
+    Process out the file.
+</p>
+<p align="center" class="h3">
+    Step Four: Verifying the Custom Profile Using IQ-Analyzer Software
+</p>
+<p>
+    Before opening the IQ-Analyzer software, which will verify our custom
+    profiles, you’ll need to plug in the USB dongle for the software. It’s
+    blue!
+</p>
+<p>
+    Once the program is loaded, choose <strong>Color</strong> from the dropdown
+    menu in the upper left corner.
+</p>
+<p align="center">
+    <img
+        width="469"
+        height="339"
+        src="images/image21.png"
+    />
+</p>
+<p align="center">
+    <img
+        width="244"
+        height="424"
+        src="images/image12.png"
+    />
+</p>
+<p>
+You’ll then load the <strong>-VERIFY</strong> image by clicking on the    <strong>+</strong> icon found on the left-middle edge of the window.
+</p>
+<p align="center">
+    <img
+        width="199"
+        height="397"
+        src="images/image9.png"
+    />
+</p>
+<p>
+    Push <strong>Start</strong> to begin the analysis.
+</p>
+<p>
+    Your results might look something like this:
+</p>
+<table cellpadding="0" cellspacing="0" align="center">
+    <tbody>
+        <tr>
+            <td width="2" height="0">
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <img
+                    width="470"
+                    height="286"
+                    src="images/image19.png"
+                />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br clear="ALL"/>
+<p>
+    By clicking on the small right-pointing <strong>arrow</strong> in the
+    upper-right corner, two sets of info palettes will appear. The first line
+    of the second palette shows the <strong>Delta E</strong> measurements that
+    are most relevant to the work at hand. In the example below we see a Delta
+    E of .9 for the neutral category and 2.2 for the color category, resulting
+    in a total Delta E of 1.7.
+</p>
+<p>
+    This is a very fine result.
+</p>
+<p align="center"
+    <img
+        width="315"
+        height="472"
+        src="file://localhost/private/var/folders/q_/x0bx9qzx19g3jw215rsrxsh40000gp/T/TemporaryItems/msoclip/0/clip_image030.gif"
+    />
+</p>
+<p>
+    By exploring the following dropdown, we can visualize the results in a
+    variety of manners.
+</p>
+<p align="center">
+    <img
+        width="470"
+        height="217"
+        src="images/image5.png"
+    />
+</p>
+<p>
+    For instance:
+</p>
+<p align="center">
+    <img
+        width="469"
+        height="356"
+        src="images/image18.png"
+    />
+</p>
+<p>
+    And:
+</p>
+<p align="center">
+    <img
+        width="470"
+        height="357"
+        src="images/image20.png"
+    />
+</p>
+<p>
+    Click on the rotate and zoom buttons and use the cursor to move the 3D
+    model about.
+</p>
+<p>
+    And finally these last two, both of which can be rotated and zoomed as
+    well:
+</p>
+<p align="center">
+    <img
+        width="471"
+        height="357"
+        src="images/image7.png"
+    />
+</p>
+<p align="center">
+    <img
+        width="469"
+        height="356"
+        src="images/image4.png"
+    />
+</p>
+<p>
+    At this time it’s a good idea to export a report for future reference. This
+    will come handy when running a verification using this same profile at some
+    later date, say six months down the road. One can then ascertain whether
+    the profile in question has remained stable over time. To create this
+    report, click on the <strong>Export</strong> button in the lower-right
+    corner of the window. Please note that this report, along with others that
+    are automatically generated, are stored in the folder containing the
+    original <strong>VERIFY</strong> tif.
+</p>
+<p align="center">
+    <img
+        width="470"
+        height="227"
+        src="images/image1.png"
+    />
+</p>
+<p>
+    Once you verify that the new profile is a keeper, you can transfer it from
+    its current Color Sync location to a subfolder located within the Capture
+    One application itself. This will help create a more stable operating
+    environment for the profile to function within.
+</p>
+<p>
+    The following directory tree will lead you to your profile’s new home:
+</p>
+<p align="center">
+    <img
+        width="470"
+        height="14"
+        src="images/image2.png"
+    />
+</p>
+<p>
+    Lastly, it can be helpful to the group to share all operative profiles
+    among all workstations. This will allow for the seamless processing at any
+    workstation of session folders and EIP files, regardless of the bay in
+    which they originated. Be sure, likewise, to store a copy of each new
+    profile on the server to help facilitate this share and to back up the work
+    done.
+</p>
+<p align="center">
+    <strong></strong>
+</p>
+<p align="center">
+    <strong>FIN</strong>
+</p>
+</div></body>
