@@ -1,4 +1,7 @@
 <html><HEAD>
+
+
+      <link href="static/css/style.css" rel=stylesheet">
       <link href="static/css/bootstrap.min.css" rel="stylesheet">
       <script src="static/js/bootstrap.min.js"></script>
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
@@ -6,6 +9,12 @@
 <style>
 .top-buffer { margin-top: 3rem; }
 .bottom-buffer { margin-bottom: 2rem; }
+.text-large {  font-size: 130%; }
+.text-spacing {line-height: 1.2 !important; margin:20 ; }
+.no-spacing {line-height: .5 !important; }
+.indent{ padding-left: 5em }
+.table th, .table td { border-top: none !important; }
+.tab { margin-left: 40px; }
 </style>
 </HEAD>
 <body>
@@ -31,22 +40,18 @@
 <p align="center">
     <em></em>
 </p></p></div></div></div></div>
-<p>
+<p class="text-large">
     Within our Capture One software, under the BASE CHARACTERISTICS tool, there
     is a drop-down menu that allows us to choose an ICC Profile.
 </p>
 <p align="center">
-    <img
-        width="243"
-        height="76"
-        src="images/image17.png"
-    />
+    <img class="img-fluid" src="images/image17.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     The chosen profile, in this case Flash, is specific to the Phase One back
     model being used.
 </p>
-<p>
+<p class="text-large text-spacing">
     An ICC profile is responsible for interpreting the raw capture data
     streaming off a digital back’s sensor. It shapes a capture’s tonal and
     color range, and the manner by which all captured tones and colors relate
@@ -58,7 +63,7 @@ profiles are not optimized for the specific digital back    <strong>units</stron
     tones can lose their neutrality, contrast can be elevated, and even focus
     can appear softened.
 </p>
-<p>
+<p class="text-large text-spacing">
     By replacing the canned ICC profiles with in-house, custom-made ICC
     profiles, we are able to generate profiles that relate to the specific
     digital back, lens and lighting combinations present in each bay. In other
@@ -67,17 +72,13 @@ profiles are not optimized for the specific digital back    <strong>units</stron
     number FP030582), its Schneider lens, and its four Profoto strobe light
     source.
 </p>
-<p>
+<p class="text-large text-spacing">
     Our own custom-made profile will be found within the same drop-down menu:
 </p>
 <p align="center">
-    <img
-        width="262"
-        height="76"
-        src="images/image10.png"
-    />
+    <img class="img-fluid" src="images/image10.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     By using a standardized system from bay to bay to generate custom profiles,
     we not only optimize results from each station, but optimize the results
     from the studio as a whole. The desire is to have capture systems in place
@@ -85,51 +86,52 @@ profiles are not optimized for the specific digital back    <strong>units</stron
     theoretically, can then be finished in Bay 6. The results should closely
     match.
 </p>
-<p>
+<p class="text-large text-spacing">
     By the way, ICC means International Color Consortium.
-</p>
+</p><br>
 <p align="center" class="h3">
     Step One: Creating the ICC Profile Target Image
-</p>
-<p>
+</p><br>
+<p class="text-large text-spacing">
     To begin, we need to image the X-Rite Digital ColorChecker SG Card.
-</p>
+</p><br>
 <p align="center">
-    <img
-        width="419"
-        height="295"
-        src="images/image6.png"
-    />
-</p>
-<p>
+    <img class="img-fluid" src="images/image6.png">
+</p><br>
+<p class="text-large text-spacing">
     To have standardized results from bay to bay we need a repeatable set-up**:
-</p>
-<p>
-    Digital back — 30 inches above copy stand surface
-</p>
-<p>
-    Lights — at 20 degrees
-</p>
-<p>
-    — 56” from center (copy stand surface to light stand)
-</p>
-<p>
-    — 36” above copy stand surface
-</p>
+</p><br>
+<table class="table table-sm ">
+
+  <tbody>
+    <tr>
+        <td class="text-large " style="padding-left:100px">Digital Back</td>
+        <td class="text-large line-height">- 30 inches above copy stand surface</td>
+    </tr>
+    <tr colspan="2"><td></td></tr>
+    <tr>
+        <td rowspan="3" class="text-large " style="padding-left:100px">Lights</td>
+        <td class="text-large line-height">- at 20 degrees</td>
+    </tr>
+    <tr>
+        <td class="text-large line-height">- 56" from center (copy stand surface to light)</td>
+    </tr>
+    <tr>
+        <td class="text-large line-height">- 36" above copy stand surface</td>
+    </tr>
+  </tbody>
+</table>
+<br>
 <p align="center">
-    <img
-        width="470"
-        height="258"
-        src="images/image8.jpg"
-    />
-</p>
-<p>
+    <img class="img-fluid" src="images/image8.jpg">
+</p><br>
+<p class="text-large text-spacing">
     <strong>*</strong>
     This set-up is applicable for Bays 1, 3, 5, and 6. The IQ3 in Bay 4 will
     use four lights at their standard height and distance. The BC100 has its
     own methodology.
 </p>
-<p>
+<p class="text-large text-spacing">
     <strong>**Please note</strong>
     , that since first creating this document back in 2015 some things have
     changed. One change is our conclusion that a repeatable set-up, as
@@ -138,60 +140,56 @@ profiles are not optimized for the specific digital back    <strong>units</stron
     an average set-up for an average project. The lights shouldn’t be too high
     or too low, too angled, or too close to the table.
 </p>
-<p>
+<p class="text-large text-spacing">
     Start Capture One and set the PROCESS RECIPES to U Files. Make sure the ICC
 Profile for the PROCESS RECIPE is set for    <strong>Embed color profile</strong>.
 </p>
-<p>
+<p class="text-large text-spacing">
 Go to BASE CHARACTERISTICS &gt; ICC Profile &gt; Effects &gt;    <strong>No color correction</strong>
 </p>
-<p>
+<p class="text-large text-spacing">
     <strong></strong>
 </p>
-<p>
+<p class="text-large text-spacing">
     Focus on chart and create an LCC.
 </p>
-<p>
+<p class="text-large text-spacing">
     Photograph the chart so that the central white square comes to 241 (E5) and
     neutralize on the middle grey (H5). If Capture One adjustments are needed
     to attain the 241 white-point, use the LEVELS highlight slider.
 </p>
-<p>
+<p class="text-large text-spacing">
     Crop the chart a hair more than size.
 </p>
-<p>
+<p class="text-large text-spacing">
     Add <strong>-TARGET</strong> as a suffix to the name of the file.
 </p>
-<p>
+<p class="text-large text-spacing">
     Process out the file.
 </p>
-<p>
+<p class="text-large text-spacing">
     Quit Capture One.
-</p>
+</p><br>
 <p align="center" class="h3">
     Step Two: Creating a Custom Profile Using basICColor input Software
-</p>
-<p>
+</p><br>
+<p class="text-large text-spacing">
     Before opening the basICColor input software, which will create our custom
     profiles, you’ll need to plug in the USB dongle for the software. It’s red!
 </p>
-<p>
+<p class="text-large text-spacing">
     Start the software. Enlarge the window to fill screen.
 </p>
-<p>
+<p class="text-large text-spacing">
     The screen will appear, in part, as such:
 </p>
 <p align="center">
-    <img
-        width="470"
-        height="297"
-        src="images/image16.png"
-    />
+    <img class="img-fluid" src="images/image16.png">
 </p>
-<p>
+<p class="text-large text-spacing">
 Under <strong>Image</strong> click Select and navigate to your    <strong>TARGET</strong> image and choose.
 </p>
-<p>
+<p class="text-large text-spacing">
 Under <strong>Reference</strong> click Select and navigate to file    <strong> DCSG BC.txt</strong> and choose.
 </p>
 <table cellpadding="0" cellspacing="0" align="center">
@@ -204,34 +202,22 @@ Under <strong>Reference</strong> click Select and navigate to file    <strong> D
             <td>
             </td>
             <td>
-                <img
-                    width="470"
-                    height="244"
-                    src="images/image22.png"
-                />
+                <img class="img-fluid" src="images/image22.png">
             </td>
         </tr>
     </tbody>
 </table>
 <br clear="ALL"/>
 <p align="center">
-    <img
-        width="470"
-        height="157"
-        src="images/image14.png"
-    />
+    <img class="img-fluid" src="images/image14.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     Your <strong>TARGET</strong> image will appear with a superimposed grid.
 </p>
 <p align="center">
-    <img
-        width="470"
-        height="283"
-        src="images/image3.png"
-    />
+    <img class="img-fluid" src="images/image3.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     Hold down the shift key as you grab the upper left corner square and move
     the the upper left box of the grid over the upper left white square of the
     ColorChecker chart. The bounding box will turn green when properly
@@ -242,136 +228,116 @@ Under <strong>Reference</strong> click Select and navigate to file    <strong> D
     box here and there can be sufficient. None of the bounding boxes can appear
     red.
 </p>
-<p>
+<p class="text-large text-spacing">
     If a first attempt is unsuccessful, restart the program and try anew.
 </p>
-<p>
+<p class="text-large text-spacing">
     Here’s a good result:
 </p>
 <p align="center">
-    <img
-        width="470"
-        height="404"
-        src="images/image15.png"
-    />
-</p>
-<p>
+    <img class="img-fluid" src="images/image15.png">
+</p><br>
+<p class="text-large text-spacing">
     Then under Filename name your profile. Our convention is as follows at this
     point in time:
 </p>
-<p>
+<p class="text-large no-spacing tab">
     <strong>PhaseOneBackModel-NYPL_Bay#_Flash_YYYYMM</strong>
 </p>
-<p>
+<p class="text-large no-spacing tab">
     e.g., <strong>PhaseOneP45-NYPL_Bay1_Flash_201807</strong>.
 </p>
-<p>
+<p class="text-large no-spacing">
     <strong></strong>
-</p>
-<p>
+</p><br>
+<p class="text-large text-spacing">
     Our backs as of today (7/2018):
 </p>
-<p>
+<p class="text-large no-spacing tab">
     PhaseOneIQ3100MP-
 </p>
-<p>
+<p class="text-large no-spacing tab">
     PhaseOneIQ180-
 </p>
-<p>
+<p class="text-large no-spacing tab">
     PhaseOneP65-
 </p>
-<p>
+<p class="text-large no-spacing tab">
     PhaseOneP45-
 </p>
-<p>
+<p class="text-large no-spacing tab">
     PhaseOneP40+-
-</p>
-<p>
+</p><br>
+<p class="text-large text-spacing">
 It’s very important to follow this convention as such, especially the    <strong>PhaseOneBackModel-</strong> part, in order for proper
     viewing/accessibility within the Capture One application.
 </p>
-<p>
+<p class="text-large text-spacing">
     Under Spectral conversion<strong> </strong>choose &gt; Illuminant &gt; CIE
     Standard Illuminants &gt; <strong>CIE_D50</strong>.
 </p>
 <p align="center">
-    <img
-        width="470"
-        height="297"
-        src="images/image13.png"
-    />
+    <img class="img-fluid" src="images/image13.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     Click Create ICC profile(s) at the bottom of the window. The profile will
     be automatically stored within the computer’s Library folder &gt; ColorSync
     &gt; Profiles and made accessible to the Capture One program through the
     dropdown ICC menu within the Base Characteristics tool.
 </p>
-<p align="center" class="h3">
+<br><p align="center" class="h3">
     Step Three: Creating the ICC Profile Verification Image
-</p>
-<p>
+</p><br>
+<p class="text-large text-spacing">
     Start Capture One and set the PROCESS RECIPES to U Files. Make sure the ICC
     Profile for the PROCESS RECIPE is set for <strong>ProPhoto</strong>.
 </p>
-<p>
+<p class="text-large text-spacing">
     Go to BASE CHARACTERISTICS &gt; ICC Profile. In the dropdown menu you’ll
     find the ICC profile just created. Choose this profile and capture another
     image of the ColorChecker chart using the previously made LCC.
 </p>
-<p>
+<p class="text-large text-spacing">
     Adjust the white square (E5) to 241 and assure the neutrality of the middle
     grey (H5).
 </p>
-<p>
+<p class="text-large text-spacing">
     No need to crop.
 </p>
-<p>
+<p class="text-large text-spacing">
     Add <strong>-VERIFY</strong> as a suffix to the name of the file.
 </p>
-<p>
+<p class="text-large text-spacing">
     Process out the file.
 </p>
-<p align="center" class="h3">
+<br><p align="center" class="h3">
     Step Four: Verifying the Custom Profile Using IQ-Analyzer Software
-</p>
-<p>
+</p><br>
+<p class="text-large text-spacing">
     Before opening the IQ-Analyzer software, which will verify our custom
     profiles, you’ll need to plug in the USB dongle for the software. It’s
     blue!
 </p>
-<p>
+<p class="text-large text-spacing">
     Once the program is loaded, choose <strong>Color</strong> from the dropdown
     menu in the upper left corner.
 </p>
 <p align="center">
-    <img
-        width="469"
-        height="339"
-        src="images/image21.png"
-    />
+    <img class="img-fluid" src="images/image21.png">
 </p>
 <p align="center">
-    <img
-        width="244"
-        height="424"
-        src="images/image12.png"
-    />
+    <img class="img-fluid" src="images/image12.png">
 </p>
-<p>
+<p class="text-large text-spacing">
 You’ll then load the <strong>-VERIFY</strong> image by clicking on the    <strong>+</strong> icon found on the left-middle edge of the window.
 </p>
 <p align="center">
-    <img
-        width="199"
-        height="397"
-        src="images/image9.png"
-    />
+    <img class="img-fluid" src="images/image9.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     Push <strong>Start</strong> to begin the analysis.
 </p>
-<p>
+<p class="text-large text-spacing">
     Your results might look something like this:
 </p>
 <table cellpadding="0" cellspacing="0" align="center">
@@ -384,17 +350,13 @@ You’ll then load the <strong>-VERIFY</strong> image by clicking on the    <str
             <td>
             </td>
             <td>
-                <img
-                    width="470"
-                    height="286"
-                    src="images/image19.png"
-                />
+                <img class="img-fluid" src="images/image19.png">
             </td>
         </tr>
     </tbody>
 </table>
 <br clear="ALL"/>
-<p>
+<p class="text-large text-spacing">
     By clicking on the small right-pointing <strong>arrow</strong> in the
     upper-right corner, two sets of info palettes will appear. The first line
     of the second palette shows the <strong>Delta E</strong> measurements that
@@ -402,70 +364,46 @@ You’ll then load the <strong>-VERIFY</strong> image by clicking on the    <str
     E of .9 for the neutral category and 2.2 for the color category, resulting
     in a total Delta E of 1.7.
 </p>
-<p>
+<p class="text-large text-spacing">
     This is a very fine result.
 </p>
-<p align="center"
-    <img
-        width="315"
-        height="472"
-        src="file://localhost/private/var/folders/q_/x0bx9qzx19g3jw215rsrxsh40000gp/T/TemporaryItems/msoclip/0/clip_image030.gif"
-    />
+<p align="center">
+    <img class="img-fluid" src="images/image11.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     By exploring the following dropdown, we can visualize the results in a
     variety of manners.
 </p>
 <p align="center">
-    <img
-        width="470"
-        height="217"
-        src="images/image5.png"
-    />
+    <img class="img-fluid" src="images/image5.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     For instance:
 </p>
 <p align="center">
-    <img
-        width="469"
-        height="356"
-        src="images/image18.png"
-    />
+    <img class="img-fluid" src="images/image18.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     And:
 </p>
 <p align="center">
-    <img
-        width="470"
-        height="357"
-        src="images/image20.png"
-    />
+    <img class="img-fluid" src="images/image20.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     Click on the rotate and zoom buttons and use the cursor to move the 3D
     model about.
 </p>
-<p>
+<p class="text-large text-spacing">
     And finally these last two, both of which can be rotated and zoomed as
     well:
 </p>
 <p align="center">
-    <img
-        width="471"
-        height="357"
-        src="images/image7.png"
-    />
+    <img class="img-fluid" src="images/image7.png">
 </p>
 <p align="center">
-    <img
-        width="469"
-        height="356"
-        src="images/image4.png"
-    />
+    <img class="img-fluid" src="images/image4.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     At this time it’s a good idea to export a report for future reference. This
     will come handy when running a verification using this same profile at some
     later date, say six months down the road. One can then ascertain whether
@@ -476,29 +414,21 @@ You’ll then load the <strong>-VERIFY</strong> image by clicking on the    <str
     original <strong>VERIFY</strong> tif.
 </p>
 <p align="center">
-    <img
-        width="470"
-        height="227"
-        src="images/image1.png"
-    />
+    <img class="img-fluid" src="images/image1.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     Once you verify that the new profile is a keeper, you can transfer it from
     its current Color Sync location to a subfolder located within the Capture
     One application itself. This will help create a more stable operating
     environment for the profile to function within.
 </p>
-<p>
+<p class="text-large text-spacing">
     The following directory tree will lead you to your profile’s new home:
 </p>
 <p align="center">
-    <img
-        width="470"
-        height="14"
-        src="images/image2.png"
-    />
+    <img class="img-fluid" src="images/image2.png">
 </p>
-<p>
+<p class="text-large text-spacing">
     Lastly, it can be helpful to the group to share all operative profiles
     among all workstations. This will allow for the seamless processing at any
     workstation of session folders and EIP files, regardless of the bay in
@@ -506,10 +436,5 @@ You’ll then load the <strong>-VERIFY</strong> image by clicking on the    <str
     profile on the server to help facilitate this share and to back up the work
     done.
 </p>
-<p align="center">
-    <strong></strong>
-</p>
-<p align="center">
-    <strong>FIN</strong>
-</p>
+
 </div></body>
