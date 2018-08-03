@@ -9,6 +9,7 @@
 .top-buffer { margin-top: 3rem; }
 .bottom-buffer { margin-bottom: 2rem; }
 .caption-buffer { margin-top: 1em; }
+.header-buffer { margin-bottom: .7em; }
 .text-large {  font-size: 130%; }
 .text-spacing {line-height: 1.2 !important; }
 .no-spacing {line-height: .5 !important; }
@@ -22,14 +23,12 @@
 .teal { color: #036480; }
 .grey { background-color: #dddddd; }
 .table th, .table td { border-top: none !important; }
-.row {
-  display: flex;
-}
-
-.column {
-  flex: 33.33%;
-  padding: 25px;
-}
+.row { display: flex; }
+.column { flex: 33.33%; padding: 25px; }
+ul.dashed { list-style: none; padding-left: 0; }
+ul.dashed > li { margin-left: .7em; margin-bottom: .7em; }
+/* Prevent nested li's from getting messed up */
+ul.dashed > li::before { content: "-"; margin-left: -.7em; position:relative; left: -.7em;}
 </style>
 </HEAD>
 <body>
@@ -58,7 +57,7 @@
     The vendor will be notified by New York Public Library at the beginning of
     a project if any adjustments to these specifications are needed.
 </p><br>
-<p class="H2 text-spacing">
+<p class="H2 text-spacing header-buffer">
     <u>Print Format Specifications</u>
 </p>
 <p class="text-large text-spacing tab">
@@ -70,16 +69,17 @@
 <p class="text-large list-spacing tab">
     For each object, the vendor will provide:
 </p>
-<p class="text-large text-spacing indent">
-    - Preservation Master Files
-</p>
-<p class="text-large text-spacing indent">
-    - Service Files
-</p>
-<p class="text-large text-spacing indent">
-    - Technical Metadata
-</p><br>
-<H3 class="text-spacing headertab">
+<ul class="dashed text-large text-spacing indent">
+    <li>
+    Preservation Master Files
+</li>
+<li>
+    Service Files
+</li>
+<li>
+    Technical Metadata
+</li></ul><br>
+<H3 class="text-spacing headertab header-buffer">
     <a name="fuzgstfuuyju"></a>
     <u>Image Specifications for All Print Format Files</u>
 </H1>
@@ -116,29 +116,32 @@
     </a>
     sections of this document
 </p><br>
-<p class="H4 text-spacing headerindent">
+<p class="H4 text-spacing headerindent header-buffer">
     <em><u> </u></em>
     <u>Targets</u>
 </p>
-<p class="text-large text-spacing indenttab">
-    - An object-level colorchecker target should be included in every capture,
+<ul class="dashed indenttab text-large text-spacing">
+    <li>
+    An object-level colorchecker target should be included in every capture,
     or, if this is not possible, at the beginning of each session. (i.e. for
     each separate bound volume, newspaper, or folder of manuscripts).
-</p>
-<p class="text-large text-spacing indenttab">
-    - The target is used to check exposure, color, and neutral balance. Because
+    </li>
+    <li>
+    The target is used to check exposure, color, and neutral balance. Because
     of this, if the target is <em>NOT</em> included in each capture, then it is
     crucial that the conditions used to capture the target remain consistent
     throughout the session.
-</p>
-<p class="text-large text-spacing indenttab">
-    - The target must include both color and grayscale. (i.e. A 24 patch
+    </li>
+    <li>
+    The target must include both color and grayscale. (i.e. A 24 patch
 Gretagmacbeth/X-Rite ColorChecker target or Kodak/Tiffen Q13 style target).    <em>Examples given at end of this section.</em>
-</p>
-<p class="text-large text-spacing indenttab">
-    - If multiple cameras are used in one session, corresponding targets should
+    </li>
+    <li>
+    If multiple cameras are used in one session, corresponding targets should
     be included.
-</p><br><br>
+    </li>
+</ul>
+    <br><br>
 <p class="text-large text-spacing indent">
     <em>Visual Examples of Acceptable Targets</em>
 </p>
@@ -163,64 +166,72 @@ Gretagmacbeth/X-Rite ColorChecker target or Kodak/Tiffen Q13 style target).    <
 <p class="text-large text-spacing indent">
     <em>X-Rite ColorChecker Target</em>
 </p><br>
-<p class="H4 text-spacing headerindent">
+<p class="H4 text-spacing headerindent header-buffer">
     <u>Exposure</u>
 </p>
-<p class="text-large text-spacing indenttab">
-    - An even lighting adjustment will be applied to all files <em>OR</em> the
+<ul class="dashed text-large text-spacing indenttab">
+<li>
+    An even lighting adjustment will be applied to all files <em>OR</em> the
     background will be exposed evenly so that all RGB values fall within a 10
     point range. It is important that the object be lit as evenly as possible.
-</p>
-<p class="text-large text-spacing indenttab">
-    - Exposure must be consistent across the surface of the object and
+</li>
+<li>
+    Exposure must be consistent across the surface of the object and
     throughout the session.
-</p>
-<p class="text-large text-spacing indenttab">
-    - No area of the object should have an RGB channel value of 255. If any
+</li>
+<li>
+    No area of the object should have an RGB channel value of 255. If any
     area of the object has an RGB value of 255, it is overexposed beyond what
     we are able to work with.
-</p>
-<p class="text-large text-spacing indenttab">
-    - In order to ensure correct exposure, we have specifications for the
+</li>
+<li>
+    In order to ensure correct exposure, we have specifications for the
     colorchecker target. In a processed TIF, the target should have these
     values:
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - When evaluating a target’s white patch the average value of the three
-    channels (RGB) should read 240, with a tolerance of +/- 5 points.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - When evaluating a target’s darkest black patch the average value of the
-    three channels (RGB) should read no lower than 15, with a tolerance of +/-
-    5 points. The readout for the black patch may vary depending on the target
-    and colorspace.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    <em>Examples given at end of </em>
-    <a href="#8k40hj2w3yx3"><em>Color and Neutral Balance</em></a>
-    <em> section.</em>
-</p><br>
-<p class="H4 text-spacing indent">
+</li>
+    <ul class="dashed text-spacing tab">
+        <li>
+        When evaluating a target’s white patch the average value of the three
+        channels (RGB) should read 240, with a tolerance of +/- 5 points.
+        </li>
+        <li>
+        When evaluating a target’s darkest black patch the average value of the
+        three channels (RGB) should read no lower than 15, with a tolerance of +/-
+        5 points. The readout for the black patch may vary depending on the target
+        and colorspace.
+        </li>
+        <li>
+        <em>Examples given at end of </em>
+        <a href="#8k40hj2w3yx3"><em>Color and Neutral Balance</em></a>
+        <em> section.</em>
+        </li>
+    </ul>
+</ul>
+<br>
+<p class="H4 text-spacing indent header-buffer">
     <a name="8k40hj2w3yx3"></a>
     <u>Color and Neutral Balance</u>
 </p>
-<p class="text-large text-spacing indenttab">
-    - Each file will be neutrally balanced using the middle gray of the object
+<ul class="dashed text-spacing text-large indenttab">
+<li>
+    Each file will be neutrally balanced using the middle gray of the object
     level target.
-</p>
-<p class="text-large text-spacing indenttab">
-    - Each RGB channel of the middle gray square will be within +/- 1 point of
+</li>
+<li>
+    Each RGB channel of the middle gray square will be within +/- 1 point of
     each other. <em>Examples given at end of this section.</em>
-</p>
-<p class="text-large text-spacing indenttab">
-    - Color must be consistent across the surface of the object and throughout
+</li>
+<li>
+    Color must be consistent across the surface of the object and throughout
     the session.
-</p>
-<p class="text-large text-spacing indenttab">
-    - There will be no desaturation or other adjustments that would affect the
+</li>
+<li>
+    There will be no desaturation or other adjustments that would affect the
     color of the image. The image should match the object as accurately as
     possible with regards to color
-</p><br><br>
+</li>
+</ul>
+<br><br>
 <p class="text-large text-spacing indent">
     <em>
         Visual Examples of Acceptable RGB Readouts for Exposure and Color
@@ -295,60 +306,66 @@ Gretagmacbeth/X-Rite ColorChecker target or Kodak/Tiffen Q13 style target).    <
 <p class="text-large text-spacing">
     <em></em>
 </p><br>
-<p class="H4 text-spacing headerindent">
+<p class="H4 text-spacing headerindent header-buffer">
     <u>Sharpening</u>
 </p>
-<p class="text-large text-spacing indenttab">
-    - Minimal sharpening will be applied to all files. There will be no more
-    than 90% sharpening applied with a pixel radius of no more than 1.
-</p><br>
-<p class="H4 text-spacing headerindent">
+<ul class="dashed text-large text-spacing indenttab">
+    <li>
+    Minimal sharpening will be applied to all files. There will be no more
+            than 90% sharpening applied with a pixel radius of no more than 1.
+</li></ul>
+<p class="H4 text-spacing headerindent header-buffer">
     <u>Curves</u>
 </p>
-<p class="text-large text-spacing indenttab">
-    - Tone curves will be set to linear for all captures.
-</p>
-<p class="text-large text-spacing indenttab">
-    - Files must <em>NOT</em> be delivered with an S curve.
-</p>
-<p class="H4 text-spacing headerindent">
+<ul class="dashed text-large text-spacing indenttab">
+    <li>
+    Tone curves will be set to linear for all captures.
+    </li>
+    <li>
+    Files must <em>NOT</em> be delivered with an S curve.
+    </li>
+</ul>
+<p class="H4 text-spacing headerindent header-buffer">
     <u>Moire</u>
     :
 </p>
-<p class="text-large text-spacing indenttab">
-    - If moire is present in the images, corrective actions must be applied.
-</p>
-<p class="text-large text-spacing">
-    <em> </em>
-</p><br>
-<p class="H3 text-spacing headertab">
+<ul class="dashed text-large text-spacing indenttab">
+    <li>
+    If moire is present in the images, corrective actions must be applied.
+    </li>
+</ul>
+<br>
+<p class="H3 text-spacing headertab header-buffer">
     <a name="rzqlyb4v3k6v"></a>
         <u>Preservation Master File Specifications for All Print Formats</u>
 </p>
-<p class="text-large text-spacing indent">
-    - The Preservation Master File is the highest level derivative of the
+<ul class="dashed text-large text-spacing indent">
+    <li>
+    The Preservation Master File is the highest level derivative of the
     original object and is created in an effort to produce a facsimile of the
     original with the highest level of authenticity possible.
-</p>
-<p class="text-large text-spacing indent">
-    - The Preservation Master File will be an unedited, unaltered, direct, and
+    </li>
+    <li>
+    The Preservation Master File will be an unedited, unaltered, direct, and
     complete capture of the object.
-</p>
-<p class="text-large text-spacing indent">
-    - One (1) Preservation Master File will be produced for each physically or
+    </li>
+    <li>
+    One (1) Preservation Master File will be produced for each physically or
     technically discrete part of the object. Further specifications about what
     is considered a discrete item are provided within the individual format
     specifications.
-</p>
-<p class="text-large text-spacing indent">
-    - The Preservation Master File name will have a “u” at the end of it. For
+    </li>
+    <li>
+    The Preservation Master File name will have a “u” at the end of it. For
     example, a Preservation Master File name could look like this:
     Volume##_YYYY_#####u.tif.
-</p>
-<p class="text-large text-spacing indent">
-    - There will be a corresponding Service File for each Preservation Master
+    </li>
+    <li>
+    There will be a corresponding Service File for each Preservation Master
     File.
-</p><br><br>
+    </li>
+</ul>
+    <br><br>
 <p class="text-large text-spacing indent">
     <em>
         Image Specifications for Preservation Master Files for Print Formats
@@ -370,16 +387,17 @@ Gretagmacbeth/X-Rite ColorChecker target or Kodak/Tiffen Q13 style target).    <
     <u>Rotation and Cropping</u>
     :
 </p>
-<p class="text-large text-spacing indentindenttab">
-    - The manuscript/object/page must fill the frame. No part of the
+<ul class="dashed text-large text-spacing indentindenttab">
+<li>
+    The manuscript/object/page must fill the frame. No part of the
     object/page should be outside of the frame.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - If there is an object level colorchecker target, it should be included
+</li>
+<li>
+    If there is an object level colorchecker target, it should be included
     within the frame.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - The image should be oriented correctly, but should not be cropped. The
+</li>
+<li>
+    The image should be oriented correctly, but should not be cropped. The
     object will typically be oriented in a top-down readable fashion based off
     of the first page of the object. All succeeding pages will be oriented
     based on the orientation of the first capture, even if they do not remain
@@ -389,55 +407,57 @@ Gretagmacbeth/X-Rite ColorChecker target or Kodak/Tiffen Q13 style target).    <
     </a>
     <a href="#hqx7awrndz70"><em> </em></a>
     <em>section.</em>
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - No adjustments should be made for keystoning. The images should not be
+</li>
+<li>
+    No adjustments should be made for keystoning. The images should not be
     distorted or adjusted in any way.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - The image will not be cropped in any way.
-</p>
+</li>
+<li>
+    The image will not be cropped in any way.
+</li>
+</ul>
 <p class="text-large text-spacing indenttab">
     <u>Resolution</u>
     :
 </p>
-<p class="text-large text-spacing indentindenttab">
-    - All files will be delivered at a minimum 400 true ppi, without
+<ul class="dashed text-spacing text-large indentindenttab">
+<li>
+    All files will be delivered at a minimum 400 true ppi, without
     interpolation.
-</p><br>
-<p class="H3 text-spacing headertab">
+</li></ul><br>
+<p class="H3 text-spacing headertab header-buffer">
     <a name="hqx7awrndz70"></a>
     <u>Service File Specifications for All Print Formats</u>
 </p>
-<p class="text-large text-spacing indent">
-    - The Service File, or S File, is the file that will eventually be used by
+<ul class="dashed text-large text-spacing indent">
+    <li>
+    The Service File, or S File, is the file that will eventually be used by
     most people. For example, these are the files that are added to the NYPL
     repository and made available for public use when the project requires that
     this be done. In contrast, the Preservation Master File, or U file, is
     accessible by the public through Digital Collections when the “High Res”
     option is chosen for download.
-</p>
-<p class="text-large text-spacing indent">
-    - The Service File is a slightly different, cropped version of the
+</li>
+<li>
+    The Service File is a slightly different, cropped version of the
     Preservation Master File.
-</p>
-<p class="text-large text-spacing indent">
-    - One (1) Service File will be produced for each physically or technically
+</li>
+<li>
+    One (1) Service File will be produced for each physically or technically
     discrete part of the object. Further specifications about what is
     considered a discrete item are provided within the individual format
     specifications.
-</p>
-<p class="text-large text-spacing indent">
-    - The Service File name will have an “s” at the end of it. For example, a
+</li>
+<li>
+    The Service File name will have an “s” at the end of it. For example, a
     Service File name could look like this: Volume##_YYYY_#####s.tif.
-</p>
-<p class="text-large text-spacing indent">
-    - There will be a corresponding Preservation Master File for each Service
+</li>
+<li>
+    There will be a corresponding Preservation Master File for each Service
     Copy File.
-</p>
-<p class="text-large text-spacing indent">
-    <em></em>
-</p><br><br>
+</li>
+</ul>
+<br><br>
 <p class="text-large text-spacing indent">
     <em> Image Specifications for Service Files for Print Formats</em>
 </p>
@@ -457,36 +477,39 @@ Gretagmacbeth/X-Rite ColorChecker target or Kodak/Tiffen Q13 style target).    <
     <u>Rotation and Cropping</u>
     :
 </p>
-<p class="text-large text-spacing indentindenttab">
-    - The manuscript/object/page must fill the frame.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - The image should be oriented correctly. The object will typically be
+<ul class="dashed text-large text-spacing indentindenttab">
+    <li>
+    The manuscript/object/page must fill the frame.
+</li>
+<li>
+    The image should be oriented correctly. The object will typically be
     oriented in a top-down readable fashion based off of the first page of the
     object. All succeeding pages will be oriented based on the orientation of
     the first capture, even if they do not remain readable from the top down.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - The file must be cropped to the page/manuscript with a ¼” border or less
+</li>
+<li>
+    The file must be cropped to the page/manuscript with a ¼” border or less
     around the entire page (including the gutter). No part of the manuscript
 should be cut off, and the edge of the page should still be visible.    <em>Examples given at end of this section</em>.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - No adjustments should be made for keystoning. The images should not be
+</li>
+<li>
+    No adjustments should be made for keystoning. The images should not be
     distorted in any way.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - Deskewing will vary depending on the project. The vendor will be told at
+</li>
+<li>
+    Deskewing will vary depending on the project. The vendor will be told at
     the beginning of a project whether deskewing will be necessary.
-</p>
+</li>
+</ul>
 <p class="text-large text-spacing indenttab">
     <u>Resolution</u>
     :
 </p>
-<p class="text-large text-spacing indentindenttab">
-    - All files will be delivered at minimum 400 true ppi, without
+<ul class="dashed text-large text-spacing indentindenttab">
+    <li>
+    All files will be delivered at minimum 400 true ppi, without
     interpolation.
-</p>
+</li></ul>
 <p class="text-large text-spacing">
     <em></em>
 </p><br><br>
@@ -534,11 +557,12 @@ should be cut off, and the edge of the page should still be visible.    <em>Exam
 <p class="text-large text-spacing">
     <em></em>
 </p><br>
-<p class="H3 text-spacing headertab">
+<p class="H3 text-spacing headertab header-buffer">
     <u>Image Specifications for Bound Volumes</u>
 </p>
-<p class="text-large text-spacing indent">
-    - All images for bound volumes will adhere to the specifications laid out
+<ul class="dashed text-large text-spacing indent">
+    <li>
+    All images for bound volumes will adhere to the specifications laid out
 in the <a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>,
     <a href="#rzqlyb4v3k6v">
         Preservation Master File Specifications for All Print Formats</a>,
@@ -547,50 +571,50 @@ in the <a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</
         Service File Specifications for All Print Formats
     </a>
     sections of this document.
-</p>
-<p class="text-large text-spacing indent">
-    - The vendor will capture the front and back of each page of the bound
+</li>
+<li>
+    The vendor will capture the front and back of each page of the bound
     volume, including the front and back cover of the binding.
-</p>
-<p class="text-large text-spacing indent">
-    - If there are materials that do not fit this convention within the bound
+</li>
+<li>
+    If there are materials that do not fit this convention within the bound
     volume, such as fold out pages, inserts, oversized materials, etc., they
     should be imaged separately, but they should be delivered in the correct
     sequence. For example, an insert will be imaged as its own, distinct page.
     When the files are delivered, the capture for the insert will be in the
     same sequence as it was viewed in the book. The naming structure would look
     potentially look like this:
-</p>
-<p class="text-large text-spacing indenttab">
+</li>
+<p class="indent">
     Volume01_1900_00005u.tif - Capture of the page preceding insert
 </p>
-<p class="text-large text-spacing indenttab">
+<p class="indent">
     Volume01_1900_00006u.tif - Capture of the insert - recto
 </p>
-<p class="text-large text-spacing indenttab">
+<p class="indent">
     Volume01_1900_00007u.tif - Capture of the insert - verso
 </p>
-<p class="text-large text-spacing indenttab">
+<p class="indent">
     Volume01_1900_00008u.tif - Capture of the page succeeding insert
 </p>
-<p class="text-large text-spacing indenttab">
+<p class="indent">
     <em>Example given at end of this section</em>
-    .
 </p>
-<p class="text-large text-spacing indent">
-    - If the left and right sides of a bound volume are captured with two
+    <li>
+    If the left and right sides of a bound volume are captured with two
     separate cameras, their exposure and color balance will be exactly the
     same.
-</p>
-<p class="text-large text-spacing indent">
-    - For every capture, the vendor will provide:
-</p>
-<p class="text-large text-spacing indenttab">
-    - A Preservation Master File image
-</p>
-<p class="text-large text-spacing indenttab">
-    - A Service File
-</p><br><br>
+</li>
+<li>
+    For every capture, the vendor will provide:
+</li>
+<ul class="dashed tab">
+    <li>
+    A Preservation Master File image
+</li>
+<li>
+    A Service File
+</li></ul></ul><br><br>
 <p class="text-large text-spacing indent">
     <em>Visual Example of A Correctly Photographed Fold Out Page</em>
 </p>
@@ -622,11 +646,12 @@ in the <a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</
         <p class="text-large caption-buffer"><em>Img. 3 - Facing Page</em></p>
     </div>
 </div>
-<p class="H3 text-spacing headertab">
+<p class="H3 text-spacing headertab header-buffer">
     <u>Image Specifications for Newspapers</u>
 </p>
-<p class="text-large text-spacing indent">
-    - All images for newspapers will adhere to the specifications laid out in
+<ul class="dashed text-large text-spacing indent">
+    <li>
+    All images for newspapers will adhere to the specifications laid out in
 the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>    <u>,</u>
     <a href="#rzqlyb4v3k6v">
         Preservation Master File Specifications for All Print Formats
@@ -637,25 +662,27 @@ the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>  
         Service File Specifications for All Print Formats
     </a>
     sections of this document.
-</p>
-<p class="text-large text-spacing indent">
-    - The vendor will capture the front and back of each page of the newspaper
+</li>
+<li>
+    The vendor will capture the front and back of each page of the newspaper
     in its entirety.
-</p>
-<p class="text-large text-spacing indent">
-    - For every capture, the vendor will provide:
-</p>
-<p class="text-large text-spacing indenttab">
-    - A Preservation Master File image
-</p>
-<p class="text-large text-spacing indenttab">
-    - A Service File
-</p>
-<p class="H3 text-spacing headertab">
+</li>
+<li>
+    For every capture, the vendor will provide:
+</li>
+<ul class="dashed tab">
+    <li>
+    A Preservation Master File image
+</li>
+<li>
+    A Service File
+</li></ul></ul>
+<p class="H3 text-spacing headertab header-buffer">
     <u>Image Specifications for Manuscripts</u>
 </p>
-<p class="text-large text-spacing indent">
-    - All images for manuscripts will adhere to the specifications laid out in
+<ul class="dashed text-large text-spacing indent">
+    <li>
+    All images for manuscripts will adhere to the specifications laid out in
 the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>    <u>,</u>
     <a href="#rzqlyb4v3k6v">
         Preservation Master File Specifications for All Print Formats
@@ -666,24 +693,23 @@ the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>  
         Service File Specifications for All Print Formats
     </a>
     sections of this document.
-</p>
-<p class="text-large text-spacing indent">
-    - The vendor will capture the front and back of each part of the manuscript
+</li>
+<li>
+    The vendor will capture the front and back of each part of the manuscript
     in its entirety.
-</p>
-<p class="text-large text-spacing indent">
-    - For every capture, the vendor will provide:
-</p>
-<p class="text-large text-spacing indenttab">
-    - A Preservation Master File image
-</p>
-<p class="text-large text-spacing indenttab">
-    - A Service File
-</p>
-<p class="text-large text-spacing">
-    <strong><u></u></strong>
-</p><br>
-<p class="H2 text-spacing">
+</li>
+<li>
+    For every capture, the vendor will provide:
+</li>
+<ul class="dashed tab">
+    <li>
+    A Preservation Master File image
+</li>
+<li>
+    A Service File
+</li></ul></ul>
+<br>
+<p class="H2 text-spacing header-buffer">
     <u>Non-Print Format Specifications</u>
 </p>
 <p class="text-large text-spacing tab">
@@ -694,16 +720,17 @@ the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>  
 <p class="text-large text-spacing tab">
     For each object, the vendor will provide:
 </p>
-<p class="text-large text-spacing indent">
-    - Preservation Master Files
-</p>
-<p class="text-large text-spacing indent">
-    - Service Files
-</p>
-<p class="text-large text-spacing indent">
-    - Technical Metadata
-</p><br>
-<p class="H3 text-spacing headertab">
+<ul class="dashed text-large text-spacing indent">
+    <li>
+    Preservation Master Files
+</li>
+<li>
+    Service Files
+</li>
+<li>
+    Technical Metadata
+</li></ul><br>
+<p class="H3 text-spacing headertab header-buffer">
     <u>Image Specifications for Microfilm</u>
 </p>
 <p class="text-large text-spacing indent">
@@ -712,26 +739,27 @@ the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>  
     format. Two files, one Preservation Master File and one Service file, will
     be delivered per capture for every object.
 </p><br>
-<p class="H3 text-spacing headertab">
+<p class="H3 text-spacing headertab header-buffer">
         <u>Preservation Master File Specifications for Microfilm</u>
 </p>
-<p class="text-large text-spacing indent">
-    - The Preservation Master File will be an unedited, unaltered, direct, and
+<ul class="dashed text-large text-spacing indent">
+    <li>
+    The Preservation Master File will be an unedited, unaltered, direct, and
     complete capture of the object.
-</p>
-<p class="text-large text-spacing indent">
-    - One (1) Preservation Master File will be produced for each physically or
+</li>
+<li>
+    One (1) Preservation Master File will be produced for each physically or
     technically discrete part of the object.
-</p>
-<p class="text-large text-spacing indent">
-    - The Preservation Master File name will have a “u” at the end of it. For
+</li>
+<li>
+    The Preservation Master File name will have a “u” at the end of it. For
     example, a Preservation Master File name could look like this:
     Volume##_YYYY_#####u.tif.
-</p>
-<p class="text-large text-spacing indent">
-    - There should be a corresponding Service File for each Preservation Master
+</li>
+<li>
+    There should be a corresponding Service File for each Preservation Master
     File.
-</p><br><br>
+</li></ul><br><br>
 <p class="text-large text-spacing indent">
     <em>Image Specifications for Preservation Master Files for Microfilm</em>
 </p>
@@ -751,57 +779,60 @@ the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>  
     <u>Rotation and Cropping</u>
     :
 </p>
-<p class="text-large text-spacing indentindenttab">
-    - The image must fill the frame.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - The image should be oriented correctly, but should not be cropped. The
+<ul class="dashed text-large text-spacing indentindenttab">
+    <li>The image must fill the frame.
+</li>
+<li>
+    The image should be oriented correctly, but should not be cropped. The
     object will typically be oriented in a top-down readable fashion based off
     of the first page of the object. All succeeding pages will be oriented
     based on the orientation of the first capture, even if they do not remain
     readable from the top down.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - The image will not be cropped in any way.
-</p>
+</li>
+<li>
+    The image will not be cropped in any way.
+</li></ul>
 <p class="text-large text-spacing indenttab">
     <u>Resolution</u>
     :
 </p>
-<p class="text-large text-spacing indentindenttab">
-    - All files will be delivered at minimum 3500 true ppi.
-</p>
+<ul class="dashed text-large text-spacing indentindenttab">
+    <li>
+    All files will be delivered at minimum 3500 true ppi.
+</li></ul>
 <p class="text-large text-spacing indenttab">
     <u>Targets</u>
 </p>
-<p class="text-large text-spacing indentindenttab">
-    - All filmed targets will be digitized. These targets should include, at
+<ul class="dashed text-large text-spacing indentindenttab">
+    <li>
+    All filmed targets will be digitized. These targets should include, at
     minimum, a “Start” target, a resolution target (such as an Image Evaluation
     Test Target) and and “End” target. Other targets may be included, such as
     targets that have information about what collection the materials are from,
     the reduction ratio, missed pages, or if the material is continued on the
     next reel. All of these digitized targets will be included in the final set
     of deliverables.
-</p><br>
-<p class="H3 text-spacing headertab">
+</li></ul><br>
+<p class="H3 text-spacing headertab header-buffer">
     <u>Service File Specifications for Microfilm</u>
 </p>
-<p class="text-large text-spacing indent">
-    - The Service File is a cropped and slightly more edited version of the
+<ul class="dashed text-large text-spacing indent">
+    <li>
+    The Service File is a cropped and slightly more edited version of the
     Preservation Master File.
-</p>
-<p class="text-large text-spacing indent">
-    - One (1) Service File will be produced for each physically or technically
+</li>
+    <li>
+    One (1) Service File will be produced for each physically or technically
     discrete part of the object.
-</p>
-<p class="text-large text-spacing indent">
-    - The Service File name will have an “s” at the end of it. For example, a
+</li>
+    <li>
+    The Service File name will have an “s” at the end of it. For example, a
     Service File name could look like this: Volume##_YYYY_#####s.tif.
-</p>
-<p class="text-large text-spacing indent">
-    - There should be a corresponding Preservation Master File for each Service
+</li>
+    <li>
+    There should be a corresponding Preservation Master File for each Service
     File.
-</p><br><br>
+</li></ul><br><br>
 <p class="text-large text-spacing indent">
     <em>Image Specifications for Service Files for Microfilm</em>
 </p>
@@ -821,46 +852,49 @@ the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>  
     <u>Rotation and Cropping</u>
     :
 </p>
-<p class="text-large text-spacing indentindenttab">
-    - The image must fill the frame.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - The image should be oriented correctly. The object will typically be
+<ul class="dashed text-large text-spacing indentindenttab">
+    <li> 
+        The image must fill the frame.
+</li>
+    <li> 
+        The image should be oriented correctly. The object will typically be
     oriented in a top-down readable fashion based off of the first page of the
     object. All succeeding pages will be oriented based on the orientation of
     the first capture, even if they do not remain readable from the top down.
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - The file must be cropped to the page with a ¼” border or less around the
+</li>
+    <li> 
+    The file must be cropped to the page with a ¼” border or less around the
     entire page (including the gutter). No part of the image should be cut off,
     and the edge of the page should still be visible.
-</p>
+</li></ul>
 <p class="text-large text-spacing indenttab">
     <u>Resolution</u>
     :
 </p>
-<p class="text-large text-spacing indentindenttab">
-    - All files will be delivered at minimum 3500 true ppi.
-</p>
+<ul class="dashed text-large text-spacing indentindenttab">
+    <li>
+    All files will be delivered at minimum 3500 true ppi.
+</li></ul>
 <p class="text-large text-spacing indenttab">
     <u>Targets</u>
 </p>
-<p class="text-large text-spacing indentindenttab">
-    - All filmed targets will be digitized. These targets should include, at
+<ul class="dashed text-large text-spacing indentindenttab">
+    <li>
+    All filmed targets will be digitized. These targets should include, at
     minimum, a “Start” target, a resolution target (such as an Image Evaluation
     Test Target) and and “End” target. Other targets may be included, such as
     targets that have information about what collection the materials are from,
     the reduction ratio, missed pages, or if the material is continued on the
     next reel. All of these digitized targets will be included in the final set
     of deliverables.
-</p><br>
+</li></ul><br>
 <p class="H2 text-spacing">
     <u>Additional Specifications</u>
 </p>
 <p class="text-large text-spacing">
     <strong><u></u></strong>
 </p><br>
-<p class="H3 text-spacing headertab">
+<p class="H3 text-spacing headertab header-buffer">
     <u> File Handling Specifications</u>
 </p>
 <p class="text-large text-spacing indent">
@@ -878,87 +912,92 @@ the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>  
 <p class="text-large text-spacing indent">
     <em>File Organization</em>
 </p>
-<p class="text-large text-spacing indenttab">
-    - Files will be organized in an hierarchical structure that directly
+<ul class="dashed text-large text-spacing indenttab">
+    <li>
+    Files will be organized in an hierarchical structure that directly
     correlates to the organization structure of the objects being digitized,
     e.g. by volume, issue, year, or reel.
-</p>
-<p class="text-large text-spacing indenttab">
-    - Preservation Master Files and Service Files will have separate
+</li>
+    <li>
+    Preservation Master Files and Service Files will have separate
     directories. These directories should be identical, except for the
     Preservation Master folders containing Preservation Master Files, and the
     Service folders containing Service Files.
-</p><br><br>
+</li></ul><br><br>
 <p class="text-large text-spacing indent">
     <em>File Naming</em>
 </p>
-<p class="text-large text-spacing indenttab">
-    - File names must have the proper .tif extension.
-</p>
-<p class="text-large text-spacing indenttab">
-    - File and directory names must <em>NOT</em> contain:
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - Special Characters
-</p>
-<p class="text-large text-spacing indentindenttab">
-    - Spaces
-</p>
-<p class="text-large text-spacing indenttab">
-    - Preservation Master Files will have a “u” at the end of the filename,
+<ul class="dashed text-large text-spacing indenttab">
+    <li>
+    File names must have the proper .tif extension.
+</li>
+    <li>
+    File and directory names must <em>NOT</em> contain:
+</li>
+<ul class="dashed tab">
+    <li>
+    Special Characters
+</li>
+    <li>
+    Spaces
+</li></ul>
+    <li>
+    Preservation Master Files will have a “u” at the end of the filename,
     directly before the extension.
-</p>
-<p class="text-large text-spacing indenttab">
-    - Service Files will have an “s” at the end of the filename, directly
+</li>
+    <li>
+    Service Files will have an “s” at the end of the filename, directly
     before the extension.
-</p>
-<p class="text-large text-spacing indenttab">
-    - Other than the “u” and the “s” at the ends of the filenames, Preservation
+</li>
+    <li>
+    Other than the “u” and the “s” at the ends of the filenames, Preservation
     Master Files and Service Files will follow the same naming convention. For
     example, if the the Preservation Master File is named
     Project_YYYYMMDD_Issue##u.tif, then the corresponding Service File will be
     named Project_YYYYMMDD_Issue##s.tif.
-</p><br><br>
+</li></ul><br><br>
 <p class="text-large text-spacing indent">
     <em>File Count</em>
 </p>
-<p class="text-large text-spacing indenttab">
-    - There will be the same number of files in the Preservation Master File
+<ul class="dashed text-large text-spacing indenttab">
+    <li>
+    There will be the same number of files in the Preservation Master File
     Directory as there are in the corresponding Service File Directory.
-</p>
-<p class="text-large text-spacing indenttab">
-    - There should be the same number of images per object in both the
+</li>
+    <li>
+    There should be the same number of images per object in both the
     Preservation Master File Directory and its corresponding Service File
     Directory.
-</p>
-<p class="text-large text-spacing indenttab">
-    - Each Preservation Master File will correspond to a cropped Service File.
-</p><br><br>
+</li>
+    <li>
+    Each Preservation Master File will correspond to a cropped Service File.
+</li></ul><br><br>
 <p class="text-large text-spacing indent">
     <em>File Delivery</em>
 </p>
-<p class="text-large text-spacing indenttab">
-    - Files must be delivered on hard drives formatted for interoperability
+<ul class="dashed text-large text-spacing indenttab">
+    <li>
+    Files must be delivered on hard drives formatted for interoperability
     between Mac OSx and Windows. Recommended hard drive formatting is exFAT.
-</p>
-<p class="text-large text-spacing indenttab">
-    - Files must be delivered with checksum manifests at the directory level.
+</li>
+    <li>
+    Files must be delivered with checksum manifests at the directory level.
     The purpose of image file checksums is to ensure that items are transferred
     safely throughout the entire chain of custody, and to ensure their
     long-term preservation. NYPL recommends using the BagIt file packaging
     format and creating “bags” for each directory containing images. If vendor
     is unable to utilize the BagIt packaging format, a spreadsheet with file
     names and corresponding checksums will be satisfactory.
-</p>
-<p class="text-large text-spacing indenttab">
-    - Delivered files must not include Thumbs.db, .DS_Store, and other hidden
+</li>
+    <li>
+    Delivered files must not include Thumbs.db, .DS_Store, and other hidden
     system files.
-</p>
-<p class="text-large text-spacing indenttab">
-    - There must be a manifest for the digital files that indicates which
+</li>
+    <li>
+    There must be a manifest for the digital files that indicates which
     materials are stored on which hard drives. The manifest can be created at
     the hard drive level or for the project overall.
-</p><br><br>
+</li></ul><br><br>
 <p class="text-large text-spacing indent">
     <em>Visual Example of Correct Folder Structure</em>
 </p><br>
@@ -1060,16 +1099,10 @@ the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>  
     </em>
 </p><br><br>
 <p class="text-large text-spacing">
-    <em></em>
-</p>
-<p class="text-large text-spacing">
     <strong><u></u></strong>
 </p>
-<p class="text-large text-spacing">
-    <strong><u></u></strong>
-</p>
-<p class="H3 text-spacing headertab">
-    <strong><u>Technical Metadata Specifications</u></strong>
+<p class="H3 text-spacing headertab header-buffer">
+    <u>Technical Metadata Specifications</u>
 </p>
 <p class="text-large text-spacing indent">
     Technical metadata must be embedded into the image file according to the
@@ -1077,23 +1110,24 @@ the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>  
     creating derivatives. When using software to process files, ensure that any
     options to remove EXIF metadata are off.
 </p><br>
-<p class="H3 text-spacing headertab">
-    <strong><u>Quality Control</u></strong>
+<p class="H3 text-spacing headertab header-buffer">
+    <u>Quality Control</u>
 </p>
 <p class="text-large text-spacing indent">
     The vendor must perform quality control for all deliverables. This must
     include, at minimum:
 </p>
-<p class="text-large text-spacing indenttab">
-    - Confirmation that all required files are present.
-</p>
-<p class="text-large text-spacing indenttab">
-    - Confirmation that all required files are named correctly.
-</p>
-<p class="text-large text-spacing indenttab">
-    - Confirmation that all images conform to the specifications outlined
+<ul class="dashed text-large text-spacing indenttab">
+    <li>
+    Confirmation that all required files are present.
+</li>
+<li>
+    Confirmation that all required files are named correctly.
+</li>
+<li>
+    Confirmation that all images conform to the specifications outlined
     above.
-</p>
+</li></ul>
 <p class="text-large text-spacing indent">
     New York Public Library will conduct their own quality control within 30
     days of receiving the files. If errors are discovered, either by the vendor
@@ -1104,7 +1138,7 @@ the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>  
     ** Waiting for feedback from Becky Fifield regarding these specs
 </p>
 <p class="H3 text-spacing headertab">
-    <strong><u>Handling of Physical Objects</u></strong>
+    <u>Handling of Physical Objects</u>
 </p>
 <p class="text-large text-spacing indent">
     The vendor will use great care in the handling of the original materials.
@@ -1118,20 +1152,21 @@ the<a href="#fuzgstfuuyju">Image Specifications for All Print Format Files</a>  
     30-50%.
 </p><br>
 <p class="H3 text-spacing headertab">
-    <strong><u> Shipment and Delivery</u></strong>
+    <u> Shipment and Delivery</u>
 </p>
 <p class="text-large text-spacing indent">
     Shipment of materials both to and from the vendor will be arranged by New
     York Public Library. There are two options for shipment and delivery:
 </p>
-<p class="text-large text-spacing indenttab">
-    - The vendor will pick up and drop off the volumes using their own shipping
+<ul class="dashed text-large text-spacing indenttab">
+    <li>
+    The vendor will pick up and drop off the volumes using their own shipping
     tools.
-</p>
-<p class="text-large text-spacing indenttab">
-    - The materials will be shipped using a shipper selected by New York Public
+</li>
+    <li>
+    The materials will be shipped using a shipper selected by New York Public
     Library
-</p>
+</li></ul>
 <p class="text-large text-spacing indent">
     New York Public Library will be responsible for shipping costs.
 </p>
