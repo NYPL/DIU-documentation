@@ -199,7 +199,7 @@ ul.CTAs a {
 
     <!-- Sidebar -->
     <!-- Sidebar -->
-        <nav id="sidebar">
+<!--         <nav id="sidebar">
             <p align="center" class="sidebar-header-image">
                 <img class="img-fluid" src="NYPL_logo1_black_pos.png">
             </p>
@@ -310,8 +310,7 @@ ul.CTAs a {
             </ul>
 
 
-        </nav>
-
+        </nav> -->
     <!-- Page Content -->
 
 <div id="content" class="container">
@@ -474,44 +473,61 @@ For additional tips, see    <a href="#_w6yawd8o31lj"><strong><em>Notes</em></str
 </p>
 <ol class="list-spacing text-large">
 <li>
-    From left computer in finder: select all CONTENTS of CAPTURE FOLDER from
-    the right side’s session folder. Holding the OPTION key, drag all files
-    into left computer’s session CAPTURE FOLDER. When prompted, opt to “merge”
-    CaptureOne folders (this will merge the capture file settings from both
-    sessions).
+    Open a Terminal session on the left computer.
 </li>
 <li>
-    Once the files are transferred, open session.
+    Type <strong>sessionmerger</strong>
 </li>
 <li>
-    REAPPLY RIGHT SIDE ICC CAMERA PROFILE using drop-down in “Other,” in
-    Base Characteristics; select “0H-TARGET-RIGHT” profile.
+    When prompted to drag in your Capture folder, drag the Capture folder from your Capture One session that you’d like to work with after the merge and press return.
 </li>
 <li>
-    Confirm that pagination is accurate throughout entire book by inspecting
-    each capture.
+    When prompted to drag in your Capture folder again, drag the Capture folder from the session where your additional files to be merged are located and press return
 </li>
 <li>
-    The white balance will need to be matched on both sides (it is helpful
-    to manually adjust values in the white balance tool). After matching, make
-    sure the neutral gray patches are still within 3 points of each other.
-</li>
-<li>
-    In work order: add total captures, assign image ID’s and process s and u
-    files.
+    The script will then use rsync to merge all captures and settings files from the second Capture One session into the first.
 </li>
 </ol><br>
 <p class="H5 header-buffer">
-    <strong><em>Before uploading to server for QC: </em></strong>
+    <strong><em>Things to consider: </em></strong>
 </p>
-<ol class="text-large list-spacing">
+<ul class="text-large list-spacing">
 <li>
-    Perform a quick check on TIFF files for ICC profiles, any noticeable
-    color shift from side to side, and that all s files are cropped.
+    You’ll need two sessions handy that you’d like to merge.
+</li>
+<li>
+    Session merger works recursively and will grab everything in the Capture folder you’d like to move, including all settings files (crops, moire adjustments, neutral balance, lens cast files, etc.)
+</li>
+<li>
+    If you need to merge two sessions on two different computers, it may be easiest to first upload the Capture folder from one session to the server. Sessions can then be merged directly from the server.
+</li>
+</ul><br>
+<p class="H5 header-buffer">
+    <strong><em>After merging sessions:</em></strong>
+</p>
+<ol class="list-spacing text-large">
+<li>
+    Open session on left computer and confirm that pagination is accurate throughout entire book by inspecting each capture.
+</li>
+<li>
+    The white balance will need to be matched on both sides (it is helpful to manually adjust values in the white balance tool). After matching, make sure the neutral gray patches are still within 3 points of each other.
+</li><br>
+<p align="center"><img class="img-fluid" src="images/image1.jpg"></p><br>
+<li>
+    On MMS work order: add total captures, assign image ID’s and process s and u files.
+</li>
+</ol><br>
+<p class="H5 header-buffer">
+    <strong><em>Before uploading to server for QC:</em></strong>
+</p>
+<ol class="list-spacing text-large">
+<li>
+    Perform a quick check on TIFF files for ICC profiles, any noticeable color shift from side to side, and that all s files are cropped.
 </li>
 <li>
     Use terminal to transfer files to server folder as normal
-</li></ol>
+</li>
+</ol>
 <br clear="all"/>
 <H2>
     <a name="_h35dq3nvvqzx"></a>
@@ -560,9 +576,14 @@ For additional tips, see    <a href="#_w6yawd8o31lj"><strong><em>Notes</em></str
 <li>
     Ensure shutter release plate is pressed evenly so that both shutters are
     released simultaneously
+</li>
+<li>
+    It is occasionally necessary to photograph a few pages of a book on a copy stand. This could
+be necessary due to tight binding that obscures text in the gutter or fragility of the
+book/page. Book scanner and copy stand shots should have matched PPI. Color matching may be a little tricky.  A good tip is to use black flocked backing on the book cradle to match your existing Book Scanner photographs.
+</li>
+</ul>    <br/>
     <br/>
-    <br/>
-</li></ul>
 <div align="center">
     <hr size="2" width="100%" align="center"/>
 </div>
